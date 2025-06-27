@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: Please cite this software using these metadata.
+title: TranSol
+authors:
+  - family-names: Resende Gomes
+    given-names: Ana Caroline 
+  - family-names: Soares Maia
+    given-names: Lilianne Patrícia
+  - family-names: Meireles dos Santos
+    given-names: Mellyssa
+  - family-names: Miranda Mares Oliveira
+    given-names: Tatiane
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amália 
+  - name-suffix: Professora
+    affiliation: PUC Minas    
+keywords:
+    - TanSol
+    - negocios
+    - transporte
+repository-code: https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-grupo-1
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-28-02

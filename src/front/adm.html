@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrador - Transol</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="assets/css/adm.css" rel="stylesheet">
+ 
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ff9800/ffffff?text=LOGO';">
+      <h2 class="admin-title">Administrador</h2> <!-- NOME REMOVIDO -->
+    </header>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar cliente por nome...">
+      <button id="searchBtn">Buscar</button>
+      <a href="cadastrar-cliente.html">
+        <button id="addClientBtn">Cadastrar Cliente</button>
+      </a>
+    </div>
+
+    <!-- SEÇÃO DE RESULTADOS DA BUSCA ) -->
+    <div class="section">
+      <h3>Resultados da Busca</h3>
+      <ul class="client-list" id="searchClientList">
+        <li>Use a barra de busca para encontrar clientes.</li>
+      </ul>
+    </div>
+
+    <!-- SEÇÃO DE ÚLTIMOS CLIENTES CADASTRADOS  -->
+    <div class="section">
+      <h3>Últimos Clientes Cadastrados</h3>
+      <ul class="client-list" id="recentClientList">
+        <li>Carregando últimos clientes...</li>
+      </ul>
+    </div>
+
+     <div class="section">
+      <h3>Notificações de Orçamentos</h3>
+      <ul id="notificacoes" class="notifications">
+        <li>Nenhuma notificação de orçamento pendente.</li>
+      </ul>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">Sair</button>
+
+  </div>
+
+  <!-- Inicialização do Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  
+    // Sua configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCWhINHI-vP34KRhDmd3tXojtdUR4c98TE",
+      authDomain: "transolapp-c9c1a.firebaseapp.com",
+      projectId: "transolapp-c9c1a",
+      storageBucket: "transolapp-c9c1a.firebasestorage.app",
+      messagingSenderId: "727466146759",
+      appId: "1:727466146759:web:e300dab41004a002a737e2"
+    };
+  
+    // Inicializa o Firebase e o Firestore globalmente
+    window.firebaseApp = initializeApp(firebaseConfig);
+    window.db = getFirestore(window.firebaseApp);
+  </script>
+  
+  <!-- Scripts do Administrador e Notificações -->
+  <script type="module" src="assets/js/adm.js"></script>
+  <script type="module" src="assets/js/notificacoes-adm.js"></script> <!-- Novo script para notificações -->
+ 
+</body>
+</html>
