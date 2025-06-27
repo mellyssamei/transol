@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function fetchRecentClients() {
     recentClientList.innerHTML = '<li>Carregando últimos clientes...</li>';
     try {
-      const response = await fetch('http://localhost:3000/clientes/ultimos', {
+      const response = await fetch('http://localhost:3000/transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/ultimos', {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Tentar login de administrador primeiro
       if (loginValue === FIXED_ADMIN_EMAIL && senha === FIXED_ADMIN_PASSWORD) {
         try {
-          const response = await fetch('http://localhost:3000/auth/admin-fixed-login', {
+          const response = await fetch('http://localhost:3000/transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/auth/admin-fixed-login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
